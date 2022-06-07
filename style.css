@@ -1,11 +1,11 @@
-body{
-    background-color: black;
+body {
+    background-color: #222222;
     color: white;
 }
 
-#container-root{
+#container-root {
     position: relative;
-    width: 75%;
+    width: 76%;
     height: 800px;
     margin: 0 auto;
     margin-top: 4%;
@@ -13,7 +13,84 @@ body{
 }
 
 h1{
-    font-size: 40px;
+    position: relative;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    text-align: center;
+    top: 10%;
+
+}
+
+.flex-btn-comecar-jogo{
+    position: relative;
+    top: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 
+
+.btn-comecar-jogo {
+    display: flex;
+    justify-content: center;
+    
+    width: 400px;
+  
+    font-size: 28px;
+    background: green;
+    color: white;
+    padding: 30px;
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    border-radius: 40px;
+    transition: 0.8s all;
+}
+
+.btn-comecar-jogo:hover{
+    background: black;
+	transform: scale(1.1);
+    border: solid white 3px;
+    
+}
+
+
+.flex-btn-add-palavra{
+    position: relative;
+    top: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-add-palavra{
+    display: flex;
+    justify-content: center;
+
+    width: 400px;
+
+    font-size: 28px;
+    border: solid 2px green;
+    color: white;
+    padding: 30px;
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    border-radius: 40px;
+    transition: 0.8s all;
+
+}
+
+.btn-add-palavra:hover{
+	transform: scale(1.1);
+    background: black;
+    border: solid white 3px ;
+}
+
+
+
+/*
+font-family: 'Permanent Marker', cursive;
+
+font-family: 'Press Start 2P', cursive;
+
+*/
