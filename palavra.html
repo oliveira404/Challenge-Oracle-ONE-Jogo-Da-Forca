@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="palavra.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
     <title>Adicionar palavra</title>
 </head>
-<body>
-    <div id="container-root">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Digite uma palavra ou frase">
 
-        </textarea>
+<body>
+    
+    <div id="container-root">
+        
+        <div class="container-todos-elementos">
+            
+            <div class="flex-entrada-palavra">
+                <textarea class="entrada-palavra" placeholder="Digite uma palavra ou frase" name="" id="" cols="30"
+                    rows="10" maxlength="10"></textarea>
+            </div>
+            <p class="maximo-letras">&#9888; Máximo 10 letras</p>
+            <input class="btn-salvar-comecar" type="button" value="Salvar e começar">       
+            <input class="btn-cancelar" type="button" name="" id="" value="Cancelar"> 
+        </div>
     </div>
 </body>
+
 </html>

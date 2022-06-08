@@ -1,0 +1,106 @@
+
+
+
+
+.container-todos-elementos{
+    /*border: solid 1px pink;*/
+    position: relative;
+    margin: auto auto;
+    width: 800px;
+    height: 700px;
+}
+
+
+.flex-entrada-palavra{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    top: 13%;
+}
+
+
+
+.entrada-palavra{
+
+    padding: 30px;
+    text-transform: uppercase;
+    width: 800px;
+    height: 60px;
+  
+
+
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-size: 38px;
+    background: #222222;
+    outline: none;
+    resize: none;
+    border: none;
+
+    /*border: solid 1px yellow;*/
+
+    color: whitesmoke;
+
+}
+
+.maximo-letras{
+    position: relative;
+    font-size: 18px;
+    left: 50px;
+    color: white;
+    top: 435px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+.btn-salvar-comecar{
+    position: relative;
+    display: inline-block;
+    top: 450px;
+    left: 30px;
+    text-align: center;
+    width: 350px;
+    background: purple;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 28px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: 0.8s all;
+
+}
+
+.btn-salvar-comecar:hover{
+    background: rgb(175, 1, 175);
+    transform: scale(1.02);
+}
+
+
+
+.btn-cancelar{
+    position: relative;
+    display: inline-block;
+    top: 450px;
+    left: 65px;
+    text-align: center;
+    width: 350px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 28px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    border: solid 2px purple;
+    background: #222222;
+    transition: 0.8s all;
+}
+
+.btn-cancelar:hover{
+    border: solid 2px rgb(175, 1, 175);
+    transform: scale(1.02);
+}

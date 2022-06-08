@@ -9,7 +9,7 @@ body {
     height: 800px;
     margin: 0 auto;
     margin-top: 4%;
-    border: solid 1px red;
+    /*border: solid 1px red;*/
 }
 
 h1{
@@ -38,7 +38,7 @@ h1{
     width: 400px;
   
     font-size: 28px;
-    background: green;
+    background: purple;
     color: white;
     padding: 30px;
     text-decoration: none;
@@ -70,7 +70,7 @@ h1{
     width: 400px;
 
     font-size: 28px;
-    border: solid 2px green;
+    border: solid 2px purple;
     color: white;
     padding: 30px;
     text-decoration: none;
