@@ -6,25 +6,48 @@
 
 
 
-var palavras = ["IGOR"];
+var palavras = ["IGOR", "BORBOLETA"];
 var tabuleiro = document.querySelector('#forca').getContext('2d');
 var letras = [];
 var palavraCorreta = "";
 var erros = 0;
 
 
+
+
+
+var acertos = 0;
+
+
 var novoJogo = document.querySelector(".btn-novo-jogo");
 var desistir = document.querySelector(".btn-desistir");
 
 
+var novoJogoDentro = document.querySelector(".btn-novo-jogo-dentro");
+var desistirDentro = document.querySelector(".btn-desistir-dentro");
+
+
+
 novoJogo.addEventListener("click", function () {
     location.reload();
-    
+
 })
 
 
 
 desistir.addEventListener("click", function () {
+    window.location.href = "index.html";
+});
+
+
+novoJogoDentro.addEventListener("click", function () {
+    location.reload();
+
+})
+
+
+
+desistirDentro.addEventListener("click", function () {
     window.location.href = "index.html";
 });
 
@@ -105,7 +128,7 @@ function entradaJogo() {
 function escolherPalavraSecreta() {
     var palavra = palavras[Math.floor(Math.random() * palavras.length)]
     palavraSecreta = palavra;
-    console.log(palavra);
+    //console.log(palavra);
     return palavra;
 }
 
@@ -119,6 +142,8 @@ function escreverPontilhados() {
     tabuleiro.beginPath();
     var eixo = 600 / palavraSecreta.length;
     for (let i = 0; i < palavraSecreta.length; i++) {
+        
+
         tabuleiro.moveTo(100 + (eixo * i), 140);
         tabuleiro.lineTo(150 + (eixo * i), 140);
     }
@@ -155,10 +180,11 @@ function escreverLetraIncorreta(letra, errorsLeft) {
 
 function verificarLetraCorreta(key) {
     if (letras.length < 1 || letras.indexOf(key) < 0) {
-        console.log(key);
+
         letras.push(key);
         return false;
     } else {
+
         letras.push(key.toUpperCase());
         return true;
     }
@@ -166,12 +192,28 @@ function verificarLetraCorreta(key) {
 
 function adicionarLetraCorreta(i) {
     palavraCorreta += palavraSecreta[i].toUpperCase();
+    acertos = acertos + 1;
+/*
+    if(palavraCorreta.length == acertos){
+        console.log("deu certo");
+    }*/
+    
 }
+
+
+
+var containerRelatorio = document.querySelector(".container-relatorio");
+var textoVocePerdeu = document.querySelector(".voce-perdeu");
+
+var containerTodosElementos = document.querySelector(".container-todos-elementos");
+
+
+var textoVoceVenceu = document.querySelector(".voce-venceu");
 
 function adicionarLetraIncorreta(letter) {
     if (palavraSecreta.indexOf(letter) <= 0) {
         erros = erros + 1;
-        console.log(erros)
+        //console.log(erros)
         if (erros == 1) {
             mostrarForca1();
         }
@@ -201,31 +243,58 @@ function adicionarLetraIncorreta(letter) {
         }
         if (erros == 10) {
             mostrarForca10();
+            containerRelatorio.style.display = "block";
+            textoVocePerdeu.style.display = "block";
+            containerTodosElementos.style.display = "none";
+
         }
 
-    }
+
+    } 
 }
+
+var arryzin = [];
 
 document.onkeydown = (e) => {
     var letra = e.key.toUpperCase();
+    //console.log(letra)
     if (!verificarLetraCorreta(e.key)) {
         if (palavraSecreta.includes(letra)) {
             adicionarLetraCorreta(palavraSecreta.indexOf(letra))
             for (let i = 0; i < palavraSecreta.length; i++) {
                 if (palavraSecreta[i] === letra) {
                     escreverLetraCorreta(i);
+                    
+                    arryzin.push(palavraSecreta[i])
+                    //console.log(arryzin);
+                    
+                    
+                    if(arryzin.length == palavraSecreta.length){
+                        console.log("old");
+                        containerRelatorio.style.display = "block";
+                        textoVoceVenceu.style.display = "block";
+                        containerTodosElementos.style.display = "none";
+                    }
+                    
+                    
 
                 }
+                
             }
+            
         }
+      
         else {
             if (!verificarLetraCorreta(e.key))
                 return
             adicionarLetraIncorreta(letra)
             escreverLetraIncorreta(letra, erros)
+            
         }
+       
 
     }
+    
 
 }
 

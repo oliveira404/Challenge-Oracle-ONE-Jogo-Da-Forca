@@ -97,3 +97,98 @@
     transform: scale(1.02);
 }
 
+
+
+
+.container-relatorio{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: solid greenyellow 2px;
+    display: none;
+}
+
+.relatorio{
+    position: relative;
+    background: black;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50px;
+    top: 150px;
+    border: solid white 4px;
+ 
+}
+
+.voce-venceu{
+    position: relative;
+    top: 20%;
+    text-align: center;
+    font-size: 70px;
+    color: rgb(57, 255, 2);
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    display: none;
+ 
+}
+
+.voce-perdeu{
+    position: relative;
+    top: 20%;
+    text-align: center;
+    font-size: 70px;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    display: none;
+}
+
+
+.btn-novo-jogo-dentro{
+    position: relative;
+    display: inline-block;
+    top: 150px;
+    left: 100px;
+    text-align: center;
+    width: 150px;
+    background: saddlebrown;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: 0.8s all;
+}
+
+.btn-novo-jogo-dentro:hover{
+    background: rgb(217, 109, 31);
+    transform: scale(1.02);
+}
+
+
+.btn-desistir-dentro{
+    position: relative;
+    display: inline-block;
+    top: 150px;
+    left: 200px;
+    text-align: center;
+    width: 150px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    border: solid 2px saddlebrown;
+    background: none;
+    transition: 0.8s all;
+}
+
+.btn-desistir-dentro:hover{
+    border: solid 2px rgb(217, 109, 31);
+    transform: scale(1.02);
+}
