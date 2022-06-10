@@ -217,11 +217,6 @@ function verificarLetraCorreta(key) {
 
 function adicionarLetraCorreta(i) {
     palavraCorreta += palavraSecreta[i].toUpperCase();
-/*
-    if(palavraCorreta.length == acertos){
-        console.log("deu certo");
-    }*/
-    
 }
 
 

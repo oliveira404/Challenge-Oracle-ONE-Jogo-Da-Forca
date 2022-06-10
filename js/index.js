@@ -13,7 +13,6 @@ linke.addEventListener("click", function(){
     window.open("https://www.linkedin.com/in/oliveiradeigor", "_blank");
 });
 
-
 const somFundo = new Audio('./song/game.mp3')
 const somMoveBtn = new Audio('./song/acertou.wav');
 //const vitoria = new Audio('./songs/vitoria.mp3')

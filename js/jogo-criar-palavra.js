@@ -258,7 +258,7 @@ function adicionarLetraIncorreta(letter) {
             mostrarForca10();
             const somFundo2 = new Audio('./song/game-over-voice.wav')
             somFundo2.play()
-            const somFundo = new Audio('./song/game-over-voice.wav')
+            const somFundo = new Audio('./song/enforcado2.wav')
             somFundo.play()
             containerRelatorio.style.display = "block";
             textoVocePerdeu.style.display = "block";
