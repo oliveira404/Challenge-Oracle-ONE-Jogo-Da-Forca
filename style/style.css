@@ -19,7 +19,7 @@ body {
 
 .git {
     position: absolute;
-    width: 60px;
+    width: 40px;
     cursor: pointer;
     display: inline-block;
     transition: 1s all;
@@ -27,8 +27,8 @@ body {
 
 .linke {
     position: absolute;
-    margin-left: 80px;
-    width: 60px;
+    margin-left: 60px;
+    width: 40px;
     cursor: pointer;
     display: inline-block;
     transition: 1s all;
@@ -36,8 +36,8 @@ body {
 
 .oracle {
     position: absolute;
-    margin-left: 160px;
-    width: 60px;
+    margin-left: 120px;
+    width: 40px;
     cursor: pointer;
     display: inline-block;
     transition: 1s all;
@@ -45,8 +45,8 @@ body {
 
 .alura {
     position: absolute;
-    margin-left: 230px;
-    width: 63px;
+    margin-left: 180px;
+    width: 43px;
     cursor: pointer;
     display: inline-block;
     transition: 0.5s all;
@@ -75,7 +75,7 @@ body {
 
 .mensagem {
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
     font-style: italic;
 }
