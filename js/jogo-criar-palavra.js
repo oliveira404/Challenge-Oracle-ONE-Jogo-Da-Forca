@@ -16,7 +16,15 @@ palavras.push(localStorage.nomePassado);
 localStorage.clear();
 
 
+var git = document.querySelector(".git");
+git.addEventListener("click", function(){
+    window.open("https://www.github.com/oliveiradeigor", "_blank");
+});
 
+var linke = document.querySelector(".linke");
+linke.addEventListener("click", function(){
+    window.open("https://www.linkedin.com/in/oliveiradeigor", "_blank");
+});
 
 var novoJogo = document.querySelector(".btn-novo-jogo");
 var desistir = document.querySelector(".btn-desistir");
@@ -27,7 +35,7 @@ var desistirDentro = document.querySelector(".btn-desistir-dentro");
 
 novoJogo.addEventListener("click", function () {
     window.location.href = "jogo.html";
-    
+
 })
 
 
@@ -62,42 +70,62 @@ var forca10 = document.querySelector("#forca10");
 
 function mostrarForca1() {
     forca1.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca2() {
     forca2.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca3() {
     forca3.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca4() {
     forca4.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca5() {
     forca5.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca6() {
     forca6.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca7() {
     forca7.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca8() {
     forca8.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca9() {
     forca9.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 function mostrarForca10() {
     forca10.classList.remove("desenho-forca");
+    const somFundo = new Audio('./song/errou.wav')
+    somFundo.play()
 }
 
 
@@ -228,6 +256,10 @@ function adicionarLetraIncorreta(letter) {
         }
         if (erros == 10) {
             mostrarForca10();
+            const somFundo2 = new Audio('./song/game-over-voice.wav')
+            somFundo2.play()
+            const somFundo = new Audio('./song/game-over-voice.wav')
+            somFundo.play()
             containerRelatorio.style.display = "block";
             textoVocePerdeu.style.display = "block";
             containerTodosElementos.style.display = "none";
@@ -249,9 +281,13 @@ document.onkeydown = (e) => {
 
                     arryzin.push(palavraSecreta[i])
                     //console.log(arryzin);
-                    
-                    
-                    if(arryzin.length == palavraSecreta.length){
+                    const somFundo = new Audio('./song/success.mp3')
+                    somFundo.play()
+
+
+                    if (arryzin.length == palavraSecreta.length) {
+                        const somFundo = new Audio('./song/vitoria.mp3')
+                        somFundo.play()
                         //console.log("old");
                         containerRelatorio.style.display = "block";
                         textoVoceVenceu.style.display = "block";

@@ -14,17 +14,73 @@ body {
     height: 800px;
     margin: 0 auto;
     margin-top: 4%;
-    border: solid 1px red;  
+    /*border: solid 1px red;  */
 }
 
-.mensagem{
+.git {
+    position: absolute;
+    width: 60px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 1s all;
+}
+
+.linke {
+    position: absolute;
+    margin-left: 80px;
+    width: 60px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 1s all;
+}
+
+.oracle {
+    position: absolute;
+    margin-left: 160px;
+    width: 60px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 1s all;
+}
+
+.alura {
+    position: absolute;
+    margin-left: 230px;
+    width: 63px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s all;
+}
+
+
+
+.git:hover{
+    transform: scale(1.2);
+}
+
+.linke:hover{
+    transform: scale(1.2);
+}
+
+.oracle:hover{
+    transform: scale(1.2);
+}
+
+.alura:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+.mensagem {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     font-style: italic;
 }
 
-h1{
+h1 {
     position: relative;
     font-family: 'Permanent Marker', cursive;
     font-size: 100px;
@@ -33,7 +89,7 @@ h1{
 
 }
 
-.flex-btn-comecar-jogo{
+.flex-btn-comecar-jogo {
     position: relative;
     top: 30%;
     display: flex;
@@ -46,9 +102,9 @@ h1{
 .btn-comecar-jogo {
     display: flex;
     justify-content: center;
-    
+
     width: 400px;
-  
+
     font-size: 28px;
     background: saddlebrown;
     color: white;
@@ -59,15 +115,15 @@ h1{
     transition: 0.8s all;
 }
 
-.btn-comecar-jogo:hover{
+.btn-comecar-jogo:hover {
     background: black;
-	transform: scale(1.1);
+    transform: scale(1.1);
     border: solid white 3px;
-    
+
 }
 
 
-.flex-btn-add-palavra{
+.flex-btn-add-palavra {
     position: relative;
     top: 35%;
     display: flex;
@@ -75,7 +131,7 @@ h1{
     justify-content: center;
 }
 
-.btn-add-palavra{
+.btn-add-palavra {
     display: flex;
     justify-content: center;
 
@@ -92,10 +148,10 @@ h1{
 
 }
 
-.btn-add-palavra:hover{
-	transform: scale(1.1);
+.btn-add-palavra:hover {
+    transform: scale(1.1);
     background: black;
-    border: solid white 3px ;
+    border: solid white 3px;
 }
 
 
