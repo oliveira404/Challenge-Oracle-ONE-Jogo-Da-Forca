@@ -12,13 +12,6 @@ var letras = [];
 var palavraCorreta = "";
 var erros = 0;
 
-
-
-
-
-var acertos = 0;
-
-
 var novoJogo = document.querySelector(".btn-novo-jogo");
 var desistir = document.querySelector(".btn-desistir");
 
@@ -192,7 +185,6 @@ function verificarLetraCorreta(key) {
 
 function adicionarLetraCorreta(i) {
     palavraCorreta += palavraSecreta[i].toUpperCase();
-    acertos = acertos + 1;
 /*
     if(palavraCorreta.length == acertos){
         console.log("deu certo");

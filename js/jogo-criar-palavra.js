@@ -15,11 +15,14 @@ var erros = 0;
 palavras.push(localStorage.nomePassado);
 localStorage.clear();
 
-//console.log(localStorage.nomePassado);
+
 
 
 var novoJogo = document.querySelector(".btn-novo-jogo");
 var desistir = document.querySelector(".btn-desistir");
+
+var novoJogoDentro = document.querySelector(".btn-novo-jogo-dentro");
+var desistirDentro = document.querySelector(".btn-desistir-dentro");
 
 
 novoJogo.addEventListener("click", function () {
@@ -33,7 +36,16 @@ desistir.addEventListener("click", function () {
     window.location.href = "index.html";
 });
 
+novoJogoDentro.addEventListener("click", function () {
+    window.location.href = "palavra.html";
 
+})
+
+
+
+desistirDentro.addEventListener("click", function () {
+    window.location.href = "index.html";
+});
 
 
 
@@ -110,7 +122,7 @@ function entradaJogo() {
 function escolherPalavraSecreta() {
     var palavra = palavras[Math.floor(Math.random() * palavras.length)]
     palavraSecreta = palavra;
-    console.log(palavra);
+    //console.log(palavra);
     return palavra;
 }
 
@@ -173,6 +185,16 @@ function adicionarLetraCorreta(i) {
     palavraCorreta += palavraSecreta[i].toUpperCase();
 }
 
+
+var containerRelatorio = document.querySelector(".container-relatorio");
+var textoVocePerdeu = document.querySelector(".voce-perdeu");
+
+var containerTodosElementos = document.querySelector(".container-todos-elementos");
+
+
+var textoVoceVenceu = document.querySelector(".voce-venceu");
+
+
 function adicionarLetraIncorreta(letter) {
     if (palavraSecreta.indexOf(letter) <= 0) {
         erros = erros + 1;
@@ -206,10 +228,15 @@ function adicionarLetraIncorreta(letter) {
         }
         if (erros == 10) {
             mostrarForca10();
+            containerRelatorio.style.display = "block";
+            textoVocePerdeu.style.display = "block";
+            containerTodosElementos.style.display = "none";
         }
 
     }
 }
+
+var arryzin = [];
 
 document.onkeydown = (e) => {
     var letra = e.key.toUpperCase();
@@ -219,6 +246,17 @@ document.onkeydown = (e) => {
             for (let i = 0; i < palavraSecreta.length; i++) {
                 if (palavraSecreta[i] === letra) {
                     escreverLetraCorreta(i);
+
+                    arryzin.push(palavraSecreta[i])
+                    //console.log(arryzin);
+                    
+                    
+                    if(arryzin.length == palavraSecreta.length){
+                        //console.log("old");
+                        containerRelatorio.style.display = "block";
+                        textoVoceVenceu.style.display = "block";
+                        containerTodosElementos.style.display = "none";
+                    }
 
                 }
             }
