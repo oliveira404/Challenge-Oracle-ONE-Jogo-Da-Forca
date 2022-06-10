@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+/*
+.container-root{
+
+}
+*/
+
+
+
+
+#forca1,#forca2,#forca3, #forca4,#forca5,#forca6,#forca7,#forca8,#forca9,#forca10{
+    /*display: ;*/
+    position: absolute;
+    width: 300px;
+    left: 35%;
+    top: 35%;
+}
+
+
+
+.desenho-forca{
+    display: none;
+    position: absolute;
+    width: 300px;
+    left: 35%;
+    top: 35%;
+}
+
+.desenho-forca-mostrar{
+    display: block;
+    position: absolute;
+    width: 300px;
+    left: 35%;
+    top: 35%;
+}
+
 
 
 
@@ -7,18 +43,17 @@
     margin: auto auto;
     width: 800px;
     height: 700px;
+    background: rgba(0, 0, 0, 0.4);
 }
-
-
 
 .btn-novo-jogo{
     position: relative;
     display: inline-block;
-    top: 450px;
+    top: 400px;
     left: 30px;
     text-align: center;
     width: 350px;
-    background: purple;
+    background: saddlebrown;
     font-family: 'Permanent Marker', cursive;
     font-size: 28px;
     padding: 15px;
@@ -32,7 +67,7 @@
 }
 
 .btn-novo-jogo:hover{
-    background: rgb(175, 1, 175);
+    background: rgb(217, 109, 31);
     transform: scale(1.02);
 }
 
@@ -41,7 +76,7 @@
 .btn-desistir{
     position: relative;
     display: inline-block;
-    top: 450px;
+    top: 400px;
     left: 65px;
     text-align: center;
     width: 350px;
@@ -52,12 +87,13 @@
     text-decoration: none;
     border-radius: 30px;
     cursor: pointer;
-    border: solid 2px purple;
-    background: #222222;
+    border: solid 2px saddlebrown;
+    background: none;
     transition: 0.8s all;
 }
 
 .btn-desistir:hover{
-    border: solid 2px rgb(175, 1, 175);
+    border: solid 2px rgb(217, 109, 31);
     transform: scale(1.02);
 }
+

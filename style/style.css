@@ -1,6 +1,11 @@
 body {
-    background-color: #222222;
+    background-color: black;
     color: white;
+    /*background-image: url('../img/wallpaper3-black.jpg');*/
+    background: url("../img/wallpaper3-black.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #container-root {
@@ -9,7 +14,14 @@ body {
     height: 800px;
     margin: 0 auto;
     margin-top: 4%;
-    border: solid 1px red;
+    border: solid 1px red;  
+}
+
+.mensagem{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 h1{
@@ -38,7 +50,7 @@ h1{
     width: 400px;
   
     font-size: 28px;
-    background: purple;
+    background: saddlebrown;
     color: white;
     padding: 30px;
     text-decoration: none;
@@ -70,7 +82,7 @@ h1{
     width: 400px;
 
     font-size: 28px;
-    border: solid 2px purple;
+    border: solid 2px saddlebrown;
     color: white;
     padding: 30px;
     text-decoration: none;
